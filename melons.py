@@ -2,13 +2,13 @@
 class AbstractMelonOrder():
     """An abstract base class that other Melon Orders inherit from."""
 
-    def __init__(self, species, qty, country_code=None):
+    def __init__(self, species, qty, tax, country_code=None):
         """Initialize melon order attributes."""
 
         self.species = species
         self.qty = qty
-        self.country_code = country_code
         self.shipped = False
+        self.tax = tax
         if country_code:
             self.country_code = country_code
 
